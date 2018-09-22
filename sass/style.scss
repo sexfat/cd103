@@ -1,0 +1,68 @@
+@import "var";
+@import "nav";
+@import "layout/header";
+
+
+body {
+    font-size: $basefont;
+
+}
+
+h1 {
+    font-size: $basefont * 3;
+}
+
+.box {
+    font-size: $fontsize;
+    color: rgba(188, 216, 3, 0.625);
+}
+
+body {
+    font-size: $fontsize
+}
+
+
+
+
+
+
+
+
+//註解
+/*註解*/
+.container {
+    span {
+        font-size: $fontsize;
+        padding-top: 10px;
+
+        .box {
+            background-color: rgb(23, 152, 81);
+
+            .innerbox {
+                margin: $num;
+            }
+        }
+    }
+}
+
+@mixin margin-auto() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin width($width:120px , $height:null) {
+    width: $width;
+    height: $height;
+}
+
+
+
+.box2 {
+    @include margin-auto();
+    @include width(140px, 400px);
+}
+
+.box3 {
+    @include margin-auto();
+}
+
