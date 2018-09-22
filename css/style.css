@@ -29,11 +29,24 @@ body {
       margin: 20px; }
 
 .box2 {
+  width: 140px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  width: 140px;
-  height: 400px; }
+  text-align: center;
+  font-size: 18px; }
 
 .box3 {
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: center; }
+
+.sidebar .article {
+  float: right;
+  width: 100px;
+  height: 500px; }
+
+.contentus span {
+  float: left;
+  width: 800px;
+  height: 400px; }

@@ -45,24 +45,60 @@ body {
     }
 }
 
+@mixin fontsize() {
+    font-size: 18px
+}
+
+
 @mixin margin-auto() {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
-@mixin width($width:120px , $height:null) {
+@mixin width($width:120px, $height:100px) {
     width: $width;
     height: $height;
+    @include margin-auto();
+    @include fontsize()
 }
 
-
-
 .box2 {
-    @include margin-auto();
     @include width(140px, 400px);
 }
 
 .box3 {
     @include margin-auto();
 }
+
+@mixin floats($classname,$dir , $width , $height) {
+    #{$classname} {
+       float: $dir; 
+       width: $width;
+       height: $height;
+    }
+}
+
+.sidebar {
+ @include floats('.article', right, 100px ,500px);
+}
+
+.contentus {
+
+    @include floats('span', left, 800px ,400px);
+}
+
+
+@mixin circle ($dis, $padding ,$color) {
+    width: $dis + px;
+    height: $dis + px;
+    border-radius: $dis + px;
+    border: 1px solid $color;
+    padding: $padding + px;
+    cursor: pointer;
+};
+
+
+
+
 
