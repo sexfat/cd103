@@ -3,6 +3,8 @@
 @import "mixins/mixin";
 @import "layout/header";
 @import "pages/desktop";
+@import "pages/medium";
+@import "pages/moblie";
 
 
 
@@ -253,10 +255,10 @@ $bgc:yellow;
 }
 
 .sidebar {
-    @include box-list (50);
+    @include box-list (1);
 }
 
-@for $i from 1 through 100 {
+@for $i from 1 through 5 {
     .push-left-#{$i} {
         margin-left: $i * 1px;
     }
@@ -309,19 +311,67 @@ $aa : 20;
 
 
 
+$list : a01,
+a02,
+a03,
+a04;
 
-@include rwd(moblie){
- font-size: 30px;
+span {
+    width: length($list);
+    height: nth($list, 4);
+
 }
 
-@include rwd(desktop){
-    font-size: 30px;
-   }
+// $map 
 
-@include rwd(medium){
-    font-size: 20px;
-   }
+$map :(red : #f20,
+green : rgb(0, 255, 21),
+yellow : rgb(251, 255, 0));
+
+.bgc {
+    background-color: map-get($map, yellow);
+
+}
+
+$breakpoint : (moblie : 721px,
+medium: 988px,
+desktop: 1366px,
+xx-desktop: 2000px);
 
 
 
+@mixin respond($resp) {
 
+    @each $viewpoint,
+    $num in $breakpoint {
+        @if $resp==$viewpoint {
+            @media all and (min-width: $num) {
+                @content;
+            }
+        }
+    }
+}
+
+@include respond(xx-desktop) {
+    padding: 100px;
+}
+
+;
+
+
+
+@mixin grid($attr , $num) {
+    @for $i from 1 through $num {
+       .col-#{$attr}-#{$i}{
+          width: ($i / $num) * 100%;
+       }
+    }
+}
+
+@include respond (medium){
+        @include grid(md, 15);
+}
+
+@include respond (desktop){
+    @include grid(xl,15);
+}
