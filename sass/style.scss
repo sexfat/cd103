@@ -71,34 +71,90 @@ body {
     @include margin-auto();
 }
 
-@mixin floats($classname,$dir , $width , $height) {
+@mixin floats($classname, $dir, $width, $height) {
     #{$classname} {
-       float: $dir; 
-       width: $width;
-       height: $height;
+        float: $dir;
+        width: $width;
+        height: $height;
     }
 }
 
 .sidebar {
- @include floats('.article', right, 100px ,500px);
+    @include floats('.article', right, 100px, 500px);
 }
 
 .contentus {
 
-    @include floats('span', left, 800px ,400px);
+    @include floats('span', left, 800px, 400px);
 }
 
 
-@mixin circle ($dis, $padding ,$color) {
+@mixin circle ($dis, $padding, $color) {
     width: $dis + px;
     height: $dis + px;
     border-radius: $dis + px;
     border: 1px solid $color;
     padding: $padding + px;
     cursor: pointer;
-};
+}
+
+;
+
+%btn {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+@mixin btns() {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid;
+}
 
 
 
+.btn-yellow {
+    background-color: yellow;
+    @extend %btn;
+    //  @include btns();
+
+}
+
+.btn-blue {
+    background-color: blue;
+    @extend %btn;
+    // @include btns();
+}
 
 
+a {
+    color: rgb(0, 0, 0);
+
+    &:hover {
+        color: #d40000;
+    }
+
+    ;
+
+}
+
+
+p {
+    font-size: 10px;
+
+    &::before {
+        content: '';
+    }
+
+    margin: 20px;
+}
+
+
+a {
+    &.red {
+        background-color: #f20;
+    }
+}

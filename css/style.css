@@ -50,3 +50,29 @@ body {
   float: left;
   width: 800px;
   height: 400px; }
+
+.btn-yellow, .btn-blue {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid; }
+
+.btn-yellow {
+  background-color: yellow; }
+
+.btn-blue {
+  background-color: blue; }
+
+a {
+  color: black; }
+  a:hover {
+    color: #d40000; }
+
+p {
+  font-size: 10px;
+  margin: 20px; }
+  p::before {
+    content: ''; }
+
+a.red {
+  background-color: #f20; }
