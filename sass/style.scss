@@ -1,10 +1,16 @@
 @import "var";
 @import "nav";
+@import "mixins/mixin";
 @import "layout/header";
+@import "pages/desktop";
+
+
 
 
 body {
     font-size: $basefont;
+    height: 1600px;
+    background-color: rgb(0, 255, 136);
 
 }
 
@@ -158,3 +164,164 @@ a {
         background-color: #f20;
     }
 }
+
+.box {
+    width: 10px + 5px;
+    height: 10px - 5;
+    max-width: 10 * 10px;
+    min-height: (50px / 20);
+    font: 12px / 18px;
+}
+
+
+span {
+    font-size: floor(14.58px);
+    width: round(14.58px);
+    height: ceil(14.38px);
+}
+
+h1 {
+    font-size: 20px / 2;
+}
+
+
+
+body {
+    font-size: $basefont;
+}
+
+h1 {
+    font-size: floor($basefont * 5.4)
+}
+
+h2 {
+    font-size: $basefont * 3
+}
+
+h3 {
+    font-size: round($basefont * 1.8)
+}
+
+h4 {
+    font-size: $basefont * 1.4
+}
+
+h5 {
+    font-size: $basefont * 1
+}
+
+
+//比較符號
+
+$bgc:yellow;
+
+.box-color {
+    @if $bgc==red {
+        background-color: red;
+
+    }
+
+    @else {
+        background-color: #fff;
+    }
+}
+
+
+// $width : 30px ;
+// $fontsize: 60px;
+@mixin areas($width, $fontsize) {
+    .wrapper {
+        @if $width>=40px and $fontsize <=50px {
+            height: 100px;
+        }
+
+        @else {
+            height: 50px
+        }
+    }
+
+}
+
+@include areas(50px, 10px);
+
+@mixin box-list ($num) {
+    @for $i from 1 through $num {
+        .box-#{$i} {
+            margin: 100px * $i;
+        }
+    }
+}
+
+.sidebar {
+    @include box-list (50);
+}
+
+@for $i from 1 through 100 {
+    .push-left-#{$i} {
+        margin-left: $i * 1px;
+    }
+}
+
+
+
+
+
+@mixin bgi($images, $w, $h) {
+    @each $img in $images {
+        #{$img}-images {
+            background-image: url('images/#{$img}.jpg');
+            display: block;
+            width: $w;
+            height: $h;
+        }
+    }
+}
+
+
+@include bgi([a1, a2, a3], 10px, 100px);
+
+$aa : 20;
+
+
+@while $aa>0 {
+    .box-#{$aa} {
+        width: 10px-$aa;
+    }
+
+    $aa: $aa - 1;
+}
+
+// @content
+
+@include content() {
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+}
+
+;
+
+// @media all and (max-width: 768px) {
+//     body {
+//         background-color: lightblue;
+//     }
+// }
+
+
+
+
+@include rwd(moblie){
+ font-size: 30px;
+}
+
+@include rwd(desktop){
+    font-size: 30px;
+   }
+
+@include rwd(medium){
+    font-size: 20px;
+   }
+
+
+
+

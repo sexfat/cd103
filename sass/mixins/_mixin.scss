@@ -1,0 +1,32 @@
+@mixin content() {
+    .box {
+        background-color: #fff;
+        @content
+    }
+    .box-red {
+        background-color: #f20;
+        @content
+    }
+}
+
+
+
+@mixin rwd ($breakpoint) {
+    @if $breakpoint == moblie {
+        @media only screen and (max-width: $moblie) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint== medium {
+        @media all and (min-width: $medium) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == desktop {
+        @media all and (min-width: $desktop) {
+            @content
+        }
+    }
+}
