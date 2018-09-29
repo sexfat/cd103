@@ -1,3 +1,4 @@
+//
 @mixin content() {
     .box {
         background-color: #fff;
@@ -10,7 +11,7 @@
 }
 
 
-
+//斷點
 @mixin rwd ($breakpoint) {
     @if $breakpoint == moblie {
         @media only screen and (max-width: $moblie) {
@@ -30,3 +31,41 @@
         }
     }
 }
+//img
+@mixin bgi($images, $w, $h) {
+    @each $img in $images {
+        #{$img}-images {
+            background-image: url('images/#{$img}.jpg');
+            display: block;
+            width: $w;
+            height: $h;
+        }
+    }
+}
+
+//rwd
+@mixin respond($resp) {
+
+    @each $viewpoint,
+    $num in $breakpoint {
+        @if $resp==$viewpoint {
+            @media all and (min-width: $num) {
+                @content;
+            }
+        }
+    }
+}
+
+//grid
+@mixin grid($attr , $num) {
+    @for $i from 1 through $num {
+       .col-#{$attr}-#{$i}{
+          width: ($i / $num) * 100%;
+       }
+    }
+}
+
+
+
+
+

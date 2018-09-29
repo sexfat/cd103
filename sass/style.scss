@@ -1,10 +1,12 @@
 @import "var";
-@import "nav";
+// @import "nav";
 @import "mixins/mixin";
 @import "layout/header";
 @import "pages/desktop";
 @import "pages/medium";
 @import "pages/moblie";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
 
 
 
@@ -268,16 +270,7 @@ $bgc:yellow;
 
 
 
-@mixin bgi($images, $w, $h) {
-    @each $img in $images {
-        #{$img}-images {
-            background-image: url('images/#{$img}.jpg');
-            display: block;
-            width: $w;
-            height: $h;
-        }
-    }
-}
+
 
 
 @include bgi([a1, a2, a3], 10px, 100px);
@@ -299,17 +292,7 @@ $aa : 20;
     margin: 10px;
     padding: 20px;
     width: 100px;
-}
-
-;
-
-// @media all and (max-width: 768px) {
-//     body {
-//         background-color: lightblue;
-//     }
-// }
-
-
+};
 
 $list : a01,
 a02,
@@ -333,39 +316,14 @@ yellow : rgb(251, 255, 0));
 
 }
 
-$breakpoint : (moblie : 721px,
-medium: 988px,
-desktop: 1366px,
-xx-desktop: 2000px);
 
 
 
-@mixin respond($resp) {
 
-    @each $viewpoint,
-    $num in $breakpoint {
-        @if $resp==$viewpoint {
-            @media all and (min-width: $num) {
-                @content;
-            }
-        }
-    }
-}
+
 
 @include respond(xx-desktop) {
     padding: 100px;
-}
-
-;
-
-
-
-@mixin grid($attr , $num) {
-    @for $i from 1 through $num {
-       .col-#{$attr}-#{$i}{
-          width: ($i / $num) * 100%;
-       }
-    }
 }
 
 @include respond (medium){
@@ -375,3 +333,53 @@ xx-desktop: 2000px);
 @include respond (desktop){
     @include grid(xl,15);
 }
+
+
+@mixin profix( $attr , $value){
+    -moz-#{$attr}: $value;
+    -o-#{$attr}: $value;
+    -webkit-#{$attr}: $value;
+    #{$attr}: $value;
+}
+
+
+.bix {
+   @include profix (background-size , 100px);
+}
+
+
+
+
+@mixin button($bgc, $width, $height, $radius, $brc:$bgc, $color:#000) {
+    cursor: pointer;
+    background-color: $bgc;
+    border: 1px solid $brc;
+    border-radius: $radius;
+    display: inline-block;
+    text-align: center;
+    color: $color;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    padding: $height $width;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        background-color: darken($bgc, 8);
+        color: lighten($color, 5);
+    }
+
+    @content;
+
+}
+
+
+.btn {
+    @include button (rgb(14, 131, 4), 5rem, 1rem, .7rem, null, rgb(12, 200, 224))
+}
+
+
+
+
