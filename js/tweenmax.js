@@ -95,10 +95,24 @@ function animaion_01() {
 
 // animaion_01();
 
-var _btn = $('.btn');
+// var _btn = $('.btn');
 
 
-_btn.on('click' , function(){
+// _btn.on('click' , function(){
+//     TweenMax.staggerFromTo(".box09", 1, {
+//         scale: 1.2,
+//         alpha: 0
+//     }, {
+//         scale: 1,
+//         alpha: 1,
+//         ease: Elastic.easeOut
+//     }, 0.2);
+// });
+
+
+
+function ani_01(){
+
     TweenMax.staggerFromTo(".box09", 1, {
         scale: 1.2,
         alpha: 0
@@ -107,7 +121,4 @@ _btn.on('click' , function(){
         alpha: 1,
         ease: Elastic.easeOut
     }, 0.2);
-});
-
-
-
+}
