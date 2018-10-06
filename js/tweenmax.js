@@ -28,19 +28,42 @@ function animaion_01() {
         y: 200,
         x: 10
     });
+
+
+    TweenMax.fromTo(".box04", 2, {
+        y: -10
+    }, {
+        y: 150,
+        delay: 2,
+        repeatDelay : 1,
+        // ease: Elastic.easeOut,
+        repeat: -1,
+        yoyo :false
+    
+    });
 };
 
 // animaion_01();
 
+//增加classname
+TweenMax.to(".box05",4, {
+    className: "+=addclass"
+});
 
-TweenMax.fromTo(".box04", 2, {
-    y: -10
+
+
+
+TweenMax.fromTo(".box06", 2, {
+    y: 150
 }, {
     y: 150,
     delay: 2,
-    repeatDelay : 1,
-    // ease: Elastic.easeOut,
-    repeat: -1,
-    yoyo :false
+    rotationX: 720,
+    scaleX: .7,
+    // transformOrigin : 'right top'
+    // repeatDelay : 1,
+    ease: Elastic.easeOut,
+    // repeat: -1,
+    // yoyo :false
 
 });
