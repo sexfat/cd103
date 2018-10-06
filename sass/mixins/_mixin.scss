@@ -60,7 +60,11 @@
 @mixin grid($attr , $num) {
     @for $i from 1 through $num {
        .col-#{$attr}-#{$i}{
-          width: ($i / $num) * 100%;
+          width: ($i / $num) * 100% !important;
+          display: inline-block;
+          box-sizing: border-box;
+          
+
        }
     }
 }

@@ -59,31 +59,55 @@ function animaion_01() {
         yoyo: true
 
     });
+
+    //增加classname
+    TweenMax.to(".box05", 4, {
+        className: "+=addclass"
+    });
+
+
+    // bezier
+    TweenMax.to(".box07", 2, {
+        bezier: {
+            values: [{
+                x: 0,
+                y: 0
+            }, {
+                x: 250,
+                y: 400
+            }, {
+                x: 170,
+                y: 200
+            }, {
+                x: 0,
+                y: 0
+            }],
+            autoRotate: false
+        },
+        ease: Power1.easeOut
+    });
+    TweenMax.staggerFromTo('.box08 , .box07 , .box06', 1, {
+        y: 0
+    }, {
+        y: 100
+    }, .8);
 };
 
 // animaion_01();
 
-//增加classname
-TweenMax.to(".box05", 4, {
-    className: "+=addclass"
+var _btn = $('.btn');
+
+
+_btn.on('click' , function(){
+    TweenMax.staggerFromTo(".box09", 1, {
+        scale: 1.2,
+        alpha: 0
+    }, {
+        scale: 1,
+        alpha: 1,
+        ease: Elastic.easeOut
+    }, 0.2);
 });
 
-TweenMax.to(".box07", 2, {
-    bezier: {
-        values: [{
-            x: 0,
-            y: 0
-        }, {
-            x: 250,
-            y: 400
-        }, {
-            x: 170,
-            y: 200
-        },  {
-            x: 0,
-            y: 0
-        }],
-        autoRotate: false
-    },
-    ease: Power1.easeOut
-});
+
+

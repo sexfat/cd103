@@ -5238,67 +5238,127 @@ span {
 
 @media all and (min-width: 988px) {
   .col-md-1 {
-    width: 6.66667%; }
+    width: 6.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-2 {
-    width: 13.33333%; }
+    width: 13.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-3 {
-    width: 20%; }
+    width: 20% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-4 {
-    width: 26.66667%; }
+    width: 26.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-5 {
-    width: 33.33333%; }
+    width: 33.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-6 {
-    width: 40%; }
+    width: 40% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-7 {
-    width: 46.66667%; }
+    width: 46.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-8 {
-    width: 53.33333%; }
+    width: 53.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-9 {
-    width: 60%; }
+    width: 60% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-10 {
-    width: 66.66667%; }
+    width: 66.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-11 {
-    width: 73.33333%; }
+    width: 73.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-12 {
-    width: 80%; }
+    width: 80% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-13 {
-    width: 86.66667%; }
+    width: 86.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-14 {
-    width: 93.33333%; }
+    width: 93.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-md-15 {
-    width: 100%; } }
+    width: 100% !important;
+    display: inline-block;
+    box-sizing: border-box; } }
 
 @media all and (min-width: 1366px) {
   .col-xl-1 {
-    width: 6.66667%; }
+    width: 6.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-2 {
-    width: 13.33333%; }
+    width: 13.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-3 {
-    width: 20%; }
+    width: 20% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-4 {
-    width: 26.66667%; }
+    width: 26.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-5 {
-    width: 33.33333%; }
+    width: 33.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-6 {
-    width: 40%; }
+    width: 40% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-7 {
-    width: 46.66667%; }
+    width: 46.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-8 {
-    width: 53.33333%; }
+    width: 53.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-9 {
-    width: 60%; }
+    width: 60% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-10 {
-    width: 66.66667%; }
+    width: 66.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-11 {
-    width: 73.33333%; }
+    width: 73.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-12 {
-    width: 80%; }
+    width: 80% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-13 {
-    width: 86.66667%; }
+    width: 86.66667% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-14 {
-    width: 93.33333%; }
+    width: 93.33333% !important;
+    display: inline-block;
+    box-sizing: border-box; }
   .col-xl-15 {
-    width: 100%; } }
+    width: 100% !important;
+    display: inline-block;
+    box-sizing: border-box; } }
 
 .bix {
   -moz-background-size: 100px;
