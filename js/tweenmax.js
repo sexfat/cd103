@@ -111,7 +111,7 @@ function animaion_01() {
 
 
 
-function ani_01(){
+function ani_01() {
 
     TweenMax.staggerFromTo(".box09", 1, {
         scale: 1.2,
@@ -122,3 +122,41 @@ function ani_01(){
         ease: Elastic.easeOut
     }, 0.2);
 }
+
+var tl = new TimelineMax({
+    repeat: -1,
+    repeatDelay: 1,
+    yoyo: true
+});
+
+
+
+tl.add(
+    //a
+    TweenMax.to(".box10", 1, {
+        x: 200,
+        y: 100,
+        ease: Elastic.easeOut,
+
+    }));
+tl.add(
+    //b
+    TweenMax.to(".box11", 2, {
+        x: 300,
+        y: 200,
+        rotation: 180,
+        ease: Elastic.easeOut,
+        scale: 1.9
+    }));
+
+
+
+
+
+
+
+
+
+
+
+console.log("end");
