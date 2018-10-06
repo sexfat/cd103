@@ -35,35 +35,55 @@ function animaion_01() {
     }, {
         y: 150,
         delay: 2,
-        repeatDelay : 1,
+        repeatDelay: 1,
         // ease: Elastic.easeOut,
         repeat: -1,
-        yoyo :false
-    
+        yoyo: false
+
+    });
+
+    TweenMax.fromTo(".box06", .8, {
+        y: 150,
+        boxShadow: "0px 0px 20px black" //陰影
+    }, {
+        y: 160,
+        // delay: 2,
+        // rotationX: 720,
+        scale: .8,
+        // transformOrigin : 'right top'
+        // repeatDelay : 1,
+        // ease: Elastic.easeOut,
+        backgroundColor: '#c603e0',
+        boxShadow: "0px 10px 10px black", //陰影
+        repeat: -1,
+        yoyo: true
+
     });
 };
 
 // animaion_01();
 
 //增加classname
-TweenMax.to(".box05",4, {
+TweenMax.to(".box05", 4, {
     className: "+=addclass"
 });
 
-
-
-
-TweenMax.fromTo(".box06", 2, {
-    y: 150
-}, {
-    y: 150,
-    delay: 2,
-    rotationX: 720,
-    scaleX: .7,
-    // transformOrigin : 'right top'
-    // repeatDelay : 1,
-    ease: Elastic.easeOut,
-    // repeat: -1,
-    // yoyo :false
-
+TweenMax.to(".box07", 2, {
+    bezier: {
+        values: [{
+            x: 0,
+            y: 0
+        }, {
+            x: 250,
+            y: 400
+        }, {
+            x: 170,
+            y: 200
+        },  {
+            x: 0,
+            y: 0
+        }],
+        autoRotate: false
+    },
+    ease: Power1.easeOut
 });
