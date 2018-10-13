@@ -135,7 +135,14 @@
     top: 200px; }
 
 .section04 {
-  background-color: #eeeeee; }
+  background-color: #eeeeee;
+  padding-top: 100px; }
   .section04 .parallax_01 {
     width: 200px;
+    height: 80px; }
+  .section04 .parallax_02 {
+    width: 120px;
+    height: 80px; }
+  .section04 .parallax_03 {
+    width: 80px;
     height: 80px; }

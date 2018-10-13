@@ -219,7 +219,12 @@ var tlp = new TimelineMax({
 tlp.set('.section02 .box_01', {
     x: 300,
     y: 300,
-}).staggerFromTo('.section02 .box_01',1,{x:0},{x:100, ease:Power1.easeOut});
+}).staggerFromTo('.section02 .box_01', 1, {
+    x: 0
+}, {
+    x: 100,
+    ease: Power1.easeOut
+});
 
 
 function parallaxs() {
@@ -229,19 +234,19 @@ function parallaxs() {
 
 
 document.getElementById('btn_scrollto').onclick = function () {
-    TweenMax.to(window ,1,{
-        scrollTo:{
-            y:"#archor",
+    TweenMax.to(window, 1, {
+        scrollTo: {
+            y: "#archor",
             offsetY: 100
         }
-      })
+    })
 }
 
 
 TweenMax.to('.textbox', 1, {
-    
-   text:"鼎泰豐驚爆漲價 餐飲業：一例一休壓頂 勢在必漲 增加文字",
-   ease: Linear.easeNone 
+
+    text: "鼎泰豐驚爆漲價 餐飲業：一例一休壓頂 勢在必漲 增加文字",
+    ease: Linear.easeNone
 })
 
 
@@ -250,25 +255,65 @@ TweenMax.to('.textbox', 1, {
 
 // scrollmagic 初始化
 
-var controller = new  ScrollMagic.Controller();
+var controller = new ScrollMagic.Controller();
 
 
-var tw01 = TweenMax.to('.section03 .box_01' , 1, {x: 400});
+var tw01 = TweenMax.to('.section03 .box_01', 1, {
+    x: 400
+});
 
 
 var scene_01 = new ScrollMagic.Scene({
-    triggerElement : '#trigger01',
-    // offset: 100,
-    duration: 600,
-    triggerHook: 0.5
-}).setTween(tw01)
-.addIndicators({
-    name: 'section_01',
-    colorStart: '#f20',
-    colorEnd: '#000'
-})
-.addTo(controller);
+        triggerElement: '#trigger01',
+        // offset: 100,
+        // duration: 600,
+        triggerHook: 0.5,
+        reverse: false
+    }).setTween(tw01)
+    .addIndicators({
+        name: 'section_01',
+        colorStart: '#f20',
+        colorEnd: '#000'
+    })
+    .addTo(controller);
 
+
+function scrollmagics() {
+    console.log('scrollmagic ok');
+    alert('message ok');
+}
+
+var section_02 = new TimelineMax({
+    repeat: 2
+});
+
+section_02.to('.parallax_01', 1 , {
+    width: '100%'
+}).to('.parallax_02', 1 ,{
+    width: '80%',
+    x: '20%'
+}).to('.parallax_03', 1 ,{
+    width: '60%',
+    x: '40%'
+});
+
+
+
+
+
+var scene_02 = new ScrollMagic.Scene({
+        triggerElement: '#trigger02',
+        // offset: 100,
+        duration: 600,
+        triggerHook: 0.5,
+        reverse: false
+    }).setTween(section_02)
+    .addIndicators({
+        name: 'section_02',
+        colorStart: '#f20',
+        colorEnd: '#000'
+    })
+    .addTo(controller);
 
 
 

@@ -130,14 +130,19 @@
 
 .section04 {
     background-color: rgb(238, 238, 238);
+    padding-top: 100px;
     
     .parallax_01 {
         @include boxs(200px, 80px);
     }
 
-    .parallax_02 {}
+    .parallax_02 {
+        @include boxs(120px, 80px);
+    }
 
-    .parallax_03 {}
+    .parallax_03 {
+        @include boxs(80px, 80px);
+    }
 
 
 
