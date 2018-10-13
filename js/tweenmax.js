@@ -278,21 +278,18 @@ var scene_01 = new ScrollMagic.Scene({
     .addTo(controller);
 
 
-function scrollmagics() {
-    console.log('scrollmagic ok');
-    alert('message ok');
-}
+
 
 var section_02 = new TimelineMax({
     repeat: 2
 });
 
-section_02.to('.parallax_01', 1 , {
+section_02.to('.parallax_01', 1, {
     width: '100%'
-}).to('.parallax_02', 1 ,{
+}).to('.parallax_02', 1, {
     width: '80%',
     x: '20%'
-}).to('.parallax_03', 1 ,{
+}).to('.parallax_03', 1, {
     width: '60%',
     x: '40%'
 });
@@ -300,13 +297,18 @@ section_02.to('.parallax_01', 1 , {
 
 
 
+function scrollmagics() {
+    console.log('scrollmagic ok');
+    alert('message ok');
+}
+
 
 var scene_02 = new ScrollMagic.Scene({
         triggerElement: '#trigger02',
         // offset: 100,
         duration: 600,
         triggerHook: 0.5,
-        reverse: false
+        // reverse: true
     }).setTween(section_02)
     .addIndicators({
         name: 'section_02',
@@ -316,6 +318,36 @@ var scene_02 = new ScrollMagic.Scene({
     .addTo(controller);
 
 
+// var parallax_sc =  TweenMax.to('.section05 .box_01', 1, {
+//     y: '60%',
+//     ease: Power1.easeNone
+// })
+
+
+var parallax_sc =  TweenMax.to('.section05 .box_01' ,1,{
+    y: '60%',
+    ease: Power1.easeOut 
+})
+
+
+
+
+
+
+
+
+var scene_03 = new ScrollMagic.Scene({
+        triggerElement: '#trigger03',
+        duration: '100%',
+        triggerHook: 0,
+        // reverse: true
+    }).setTween(parallax_sc)
+    .addIndicators({
+        name: 'section03',
+        colorStart: '#f20',
+        colorEnd: '#000'
+    })
+    .addTo(controller);
 
 
 

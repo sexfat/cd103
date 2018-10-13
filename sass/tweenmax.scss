@@ -144,7 +144,20 @@
         @include boxs(80px, 80px);
     }
 
-
-
-
 }
+
+
+.section05 {
+    background-color: rgb(224, 224, 224);
+    background-image: url('https://placem.at/people');
+    background-size: cover;  
+    
+    .box_01{
+        @include boxs(80px, 80px);
+        position: relative;
+        top: 300px;
+        left: 400px;
+    } 
+}
+
+
