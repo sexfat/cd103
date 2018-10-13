@@ -324,8 +324,17 @@ var scene_02 = new ScrollMagic.Scene({
 // })
 
 
-var parallax_sc =  TweenMax.to('.section05 .box_01' ,1,{
+var parallax_sc =  new TimelineMax();
+
+
+parallax_sc.to('.section05 .box_01' ,1,{
     y: '60%',
+    ease: Power1.easeOut 
+}).to('.section05 .box_02' ,1,{
+    y: '40%',
+    ease: Power1.easeOut 
+}).to('.section05 .box_03' ,1,{
+    y: '50%',
     ease: Power1.easeOut 
 })
 
@@ -339,9 +348,15 @@ var parallax_sc =  TweenMax.to('.section05 .box_01' ,1,{
 var scene_03 = new ScrollMagic.Scene({
         triggerElement: '#trigger03',
         duration: '100%',
-        triggerHook: 0,
+        // triggerHook: 1,
         // reverse: true
     }).setTween(parallax_sc)
+    .on('enter', function(){
+       console.log('message enter')
+    })
+    .on('leave', function(){
+        console.log('message leave')
+     })
     .addIndicators({
         name: 'section03',
         colorStart: '#f20',

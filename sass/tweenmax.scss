@@ -157,7 +157,20 @@
         position: relative;
         top: 300px;
         left: 400px;
+    }
+    .box_02{
+        @include boxs(80px, 80px);
+        position: relative;
+        top: 100px;
+        left: 300px;
     } 
+    .box_03{
+        @include boxs(80px, 80px);
+        position: relative;
+        top: 100px;
+        left: 500px;
+    } 
+    
 }
 
 
