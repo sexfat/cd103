@@ -169,3 +169,18 @@
     position: relative;
     top: 100px;
     left: 500px; }
+
+.section06 {
+  background-color: #d51043;
+  padding-top: 150px;
+  transition-property: background-color;
+  transition-duration: 0.5s; }
+  .section06 .spinbox {
+    width: 100px;
+    height: 100px;
+    background-color: #c7c7c7;
+    margin: 0 auto;
+    transform: translateY(0);
+    transition: all 1s ease-in-out; }
+    .section06 .spinbox.action {
+      transform: translateY(150px); }

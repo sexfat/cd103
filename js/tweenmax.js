@@ -324,17 +324,17 @@ var scene_02 = new ScrollMagic.Scene({
 // })
 
 
-var parallax_sc =  new TimelineMax();
 
-
-parallax_sc.to('.section05 .box_01' ,1,{
+var tls01 = TweenMax.to('.section05 .box_01' ,1,{
     y: '60%',
     ease: Power1.easeOut 
-}).to('.section05 .box_02' ,1,{
+})
+var tls02 = TweenMax.to('.section05 .box_02' ,1,{
     y: '40%',
     ease: Power1.easeOut 
-}).to('.section05 .box_03' ,1,{
-    y: '50%',
+})
+var tls03 =TweenMax.to('.section05 .box_03' ,1,{
+    y: '-80%',
     ease: Power1.easeOut 
 })
 
@@ -350,7 +350,7 @@ var scene_03 = new ScrollMagic.Scene({
         duration: '100%',
         // triggerHook: 1,
         // reverse: true
-    }).setTween(parallax_sc)
+    }).setTween([tls01, tls02 , tls03])
     .on('enter', function(){
        console.log('message enter')
     })
@@ -367,6 +367,21 @@ var scene_03 = new ScrollMagic.Scene({
 
 
 
+    var scene_04 = new ScrollMagic.Scene({
+        triggerElement: '#trigger04'
+        // offset: 100,
+        // duration: 600,
+        // triggerHook: 0.5,
+        // reverse: true
+    })
+    // .setClassToggle('.section06' , 'fadein')
+    .setClassToggle('.spinbox' , 'action')
+    .addIndicators({
+        name: 'section_04',
+        colorStart: '#f20',
+        colorEnd: '#000'
+    })
+    .addTo(controller);
 
 
 

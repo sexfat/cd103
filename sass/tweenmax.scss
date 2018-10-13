@@ -173,4 +173,35 @@
     
 }
 
+.section06 {
+    background-color: #d51043;
+    padding-top: 150px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    .spinbox {
+        @include boxs(100px , 100px);
+        background-color: rgb(199, 199, 199);
+        margin: 0 auto;
+        transform: translateY(0);
+        transition: all 1s ease-in-out;
+        &.action {
+            transform: translateY(150px);    
+        }
+       
+    }
+    // &.fadein {
+    //     background-color: #ffa500;
+    //     transition-property: background-color;
+    //     transition-duration: 0.5s;
+    //     transition-timing-function: linear;
+    //     &.action {
+    //         transform: translateY(50px);    
+    //     }
+
+    // }
+    
+
+
+}
+
 
