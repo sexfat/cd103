@@ -63,58 +63,55 @@
   padding: 0; }
 
 .section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   box-sizing: border-box; }
 
 .box {
   width: 300px;
-  height: 50px; }
-
-.section01 .box01 {
-  background-color: #fac000; }
-
-.section01 .box02 {
-  background-color: #009efa; }
-
-.section01 .box03 {
-  background-color: red; }
-
-.section01 .box04 {
-  background-color: #67e003; }
-
-.section01 .box05 {
-  background-color: #c603e0; }
-
-.section01 .box06 {
-  background-color: #df5607; }
-
-.section01 .box07 {
-  background-color: #070bdf;
-  color: #fff; }
-
-.section01 .box08 {
-  background-color: #0afd84;
-  color: #fff; }
-
-.section01 .box09 {
-  background-color: #00d9ff;
-  color: #fff;
+  height: 50px;
+  background-color: #50ffbc;
   margin-bottom: 10px;
-  opacity: 0; }
+  box-shadow: 0px 0px 10px #7c7c7c; }
 
-.section01 .btn {
-  width: 100px;
-  height: 40px;
-  background-color: #c7c7c7;
-  margin-bottom: 10px;
-  cursor: pointer; }
+.section01 {
+  background-color: #d8d8d8; }
+  .section01 .box01 {
+    background-color: #fac000; }
+  .section01 .box02 {
+    background-color: #009efa; }
+  .section01 .box03 {
+    background-color: red; }
+  .section01 .box04 {
+    background-color: #67e003; }
+  .section01 .box05 {
+    background-color: #c603e0; }
+  .section01 .box06 {
+    background-color: #df5607; }
+  .section01 .box07 {
+    background-color: #070bdf;
+    color: #fff; }
+  .section01 .box08 {
+    background-color: #0afd84;
+    color: #fff; }
+  .section01 .box09 {
+    background-color: #00d9ff;
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 0; }
+  .section01 .btn {
+    width: 100px;
+    height: 40px;
+    background-color: #c7c7c7;
+    margin-bottom: 10px;
+    cursor: pointer; }
+  .section01 .box10 {
+    background-color: #7bff00;
+    color: #fff;
+    margin-bottom: 10px; }
+  .section01 .box11 {
+    background-color: #ff00d4;
+    color: #fff; }
 
-.section01 .box10 {
-  background-color: #7bff00;
-  color: #fff;
-  margin-bottom: 10px; }
-
-.section01 .box11 {
-  background-color: #ff00d4;
-  color: #fff; }
+.section02 {
+  background-color: #eabcff; }

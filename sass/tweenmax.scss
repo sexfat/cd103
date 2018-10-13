@@ -12,7 +12,7 @@ padding: 0;
 }
 
 .section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     box-sizing: border-box;
 }
@@ -20,9 +20,13 @@ padding: 0;
 .box {
     width: 300px;
     height: 50px;
+    background-color: rgb(80, 255, 188);
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgb(124, 124, 124);
 }
 
 .section01 {
+    background-color: rgb(216, 216, 216);
     .box01 {
         background-color: rgb(250, 192, 0);
     }
@@ -77,5 +81,15 @@ padding: 0;
         // margin-bottom: 10px;
         // opacity: 0;
     }
+
+}
+
+.section02 {
+   background-color: rgb(234, 188, 255);
+//    .box_01 {
+//        position: relative;
+//        top: 300px !important;
+//        left: 300px !important;
+//    }
 
 }
