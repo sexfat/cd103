@@ -225,7 +225,21 @@ tlp.set('.section02 .box_01', {
 function parallaxs() {
     var scene = document.getElementById('parallax_box');
     var parallax = new Parallax(scene);
+};
+
+
+document.getElementById('btn_scrollto').onclick = function () {
+    TweenMax.to(window ,1,{
+        scrollTo:{
+            y:"#archor",
+            offsetY: 100
+        }
+      })
 }
+
+
+
+
 
 
 
