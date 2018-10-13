@@ -206,16 +206,36 @@ document.getElementById('btn_stop').onclick = function () {
     tl.stop();
 }
 
-function ok(){
+function ok() {
     ani_01();
-//   console.log("callback");
+    //   console.log("callback");
+}
+
+
+var tlp = new TimelineMax({
+    onComplete: parallaxs
+});
+
+tlp.set('.section02 .box_01', {
+    x: 300,
+    y: 300,
+}).staggerFromTo('.section02 .box_01',1,{x:0},{x:100, ease:Power1.easeOut});
+
+
+function parallaxs() {
+    var scene = document.getElementById('parallax_box');
+    var parallax = new Parallax(scene);
 }
 
 
 
 
-// var scene = document.getElementById('parallax_box');
-// var parallax = new Parallax(scene);
+
+
+
+
+
+
 
 // var parallaxInstance = new Parallax(scene, {
 //     relativeInput: false

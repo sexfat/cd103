@@ -115,3 +115,11 @@
 
 .section02 {
   background-color: #eabcff; }
+  .section02 .box_01 {
+    position: relative;
+    top: 300px !important;
+    left: 300px !important; }
+  .section02 .box_02 {
+    position: relative;
+    top: 100px !important;
+    left: 700px !important; }

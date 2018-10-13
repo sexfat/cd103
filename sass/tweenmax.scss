@@ -2,11 +2,11 @@
 // @import "nav";
 @import "mixins/mixin";
 
-@include grid(xl , 12);
+@include grid(xl, 12);
 
 * {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 
 
 }
@@ -27,6 +27,7 @@ padding: 0;
 
 .section01 {
     background-color: rgb(216, 216, 216);
+
     .box01 {
         background-color: rgb(250, 192, 0);
     }
@@ -38,29 +39,36 @@ padding: 0;
     .box03 {
         background-color: rgb(255, 0, 0);
     }
+
     .box04 {
         background-color: #67e003;
     }
+
     .box05 {
         background-color: #c603e0;
     }
+
     .box06 {
         background-color: #df5607;
     }
+
     .box07 {
         background-color: #070bdf;
         color: #fff;
     }
+
     .box08 {
         background-color: #0afd84;
         color: #fff;
     }
+
     .box09 {
         background-color: #00d9ff;
         color: #fff;
         margin-bottom: 10px;
         opacity: 0;
     }
+
     .btn {
         width: 100px;
         height: 40px;
@@ -75,6 +83,7 @@ padding: 0;
         margin-bottom: 10px;
         // opacity: 0;
     }
+
     .box11 {
         background-color: #ff00d4;
         color: #fff;
@@ -85,11 +94,18 @@ padding: 0;
 }
 
 .section02 {
-   background-color: rgb(234, 188, 255);
-//    .box_01 {
-//        position: relative;
-//        top: 300px !important;
-//        left: 300px !important;
-//    }
+    background-color: rgb(234, 188, 255);
+
+    .box_01 {
+        position: relative;
+        top: 300px !important;
+        left: 300px !important;
+    }
+
+    .box_02 {
+        position: relative;
+        top: 100px !important;
+        left: 700px !important;
+    }
 
 }
