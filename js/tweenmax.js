@@ -124,34 +124,92 @@ function ani_01() {
 }
 
 var tl = new TimelineMax({
-    repeat: -1,
+    repeat: 2,
     repeatDelay: 1,
-    yoyo: true
+    yoyo: true,
+    onComplete: ok
 });
 
 
 
-tl.add(
-    //a
-    TweenMax.to(".box10", 1, {
-        x: 200,
-        y: 100,
-        ease: Elastic.easeOut,
+// tl.add(
+//     //a
+//     TweenMax.to(".box10", 1, {
+//         x: 200,
+//         y: 100,
+//         ease: Elastic.easeOut,
 
-    }));
-tl.add(
-    //b
-    TweenMax.to(".box11", 2, {
-        x: 300,
-        y: 200,
-        rotation: 180,
-        ease: Elastic.easeOut,
-        scale: 1.9
-    }));
-
-
+//     }));
+// tl.add(
+//     //b
+//     TweenMax.to(".box11", 2, {
+//         x: 300,
+//         y: 200,
+//         rotation: 180,
+//         ease: Elastic.easeOut,
+//         scale: 1.9
+//     }));
 
 
+// tl.to(".box10", 1, {
+//     x: 200,
+//     y: 100,
+//     ease: Elastic.easeOut,
+
+// }).to(".box11", 2, {
+//     x: 300,
+//     y: 200,
+//     rotation: 180,
+//     ease: Elastic.easeOut,
+//     scale: 1.9
+// });
+
+
+//
+
+
+
+var tw01 = TweenMax.to(".box10", 1, {
+    x: 200,
+    y: 100,
+    ease: Elastic.easeOut,
+
+});
+
+
+
+var tw02 = TweenMax.to(".box11", 2, {
+    x: 300,
+    y: 200,
+    rotation: 180,
+    ease: Elastic.easeOut,
+    scale: 1.9
+});
+
+
+tl.add([tw01, tw02]);
+
+tl.stop();
+// tl.timeScale(3);
+
+// tl.reverse();
+
+
+document.getElementById('btn_play').onclick = function () {
+
+    tl.play(0);
+}
+
+
+document.getElementById('btn_stop').onclick = function () {
+
+    tl.stop();
+}
+
+function ok(){
+    ani_01();
+//   console.log("callback");
+}
 
 
 
@@ -159,4 +217,5 @@ tl.add(
 
 
 
-console.log("end");
+
+console.log('end ok');
