@@ -28,6 +28,11 @@
 .section01 {
     background-color: rgb(216, 216, 216);
 
+    .textbox {
+        font-size: 30px;
+        // width: 120px;
+    }
+
     .box01 {
         background-color: rgb(250, 192, 0);
     }
@@ -107,5 +112,34 @@
         top: 100px !important;
         left: 700px !important;
     }
+
+}
+
+.section03 {
+    background-color: rgb(207, 238, 31);
+
+    .box_01 {
+        position: relative;
+        background-color: #fff;
+        margin: 0 auto;
+        top: 200px;
+    }
+
+
+}
+
+.section04 {
+    background-color: rgb(238, 238, 238);
+    
+    .parallax_01 {
+        @include boxs(200px, 80px);
+    }
+
+    .parallax_02 {}
+
+    .parallax_03 {}
+
+
+
 
 }

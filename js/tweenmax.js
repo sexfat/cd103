@@ -238,6 +238,36 @@ document.getElementById('btn_scrollto').onclick = function () {
 }
 
 
+TweenMax.to('.textbox', 1, {
+    
+   text:"鼎泰豐驚爆漲價 餐飲業：一例一休壓頂 勢在必漲 增加文字",
+   ease: Linear.easeNone 
+})
+
+
+
+
+
+// scrollmagic 初始化
+
+var controller = new  ScrollMagic.Controller();
+
+
+var tw01 = TweenMax.to('.section03 .box_01' , 1, {x: 400});
+
+
+var scene_01 = new ScrollMagic.Scene({
+    triggerElement : '#trigger01',
+    // offset: 100,
+    duration: 600,
+    triggerHook: 0.5
+}).setTween(tw01)
+.addIndicators({
+    name: 'section_01',
+    colorStart: '#f20',
+    colorEnd: '#000'
+})
+.addTo(controller);
 
 
 
@@ -250,10 +280,6 @@ document.getElementById('btn_scrollto').onclick = function () {
 
 
 
-
-// var parallaxInstance = new Parallax(scene, {
-//     relativeInput: false
-//   });
 
 
 

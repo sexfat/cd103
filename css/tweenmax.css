@@ -76,6 +76,8 @@
 
 .section01 {
   background-color: #d8d8d8; }
+  .section01 .textbox {
+    font-size: 30px; }
   .section01 .box01 {
     background-color: #fac000; }
   .section01 .box02 {
@@ -123,3 +125,17 @@
     position: relative;
     top: 100px !important;
     left: 700px !important; }
+
+.section03 {
+  background-color: #cfee1f; }
+  .section03 .box_01 {
+    position: relative;
+    background-color: #fff;
+    margin: 0 auto;
+    top: 200px; }
+
+.section04 {
+  background-color: #eeeeee; }
+  .section04 .parallax_01 {
+    width: 200px;
+    height: 80px; }
